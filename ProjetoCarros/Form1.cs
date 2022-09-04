@@ -13,15 +13,15 @@ namespace ProjetoCarros
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string[] nomeCarros = Directory.GetFiles(@"C:\Users\lucca\Documents\Projetos\Codificados\ImagensCarros");
+            string[] nomeCarros = Directory.GetFiles(@"C:\Users\lucca\Documents\Projetos\Codificados\ProjetoCarros\ImagensCarros\");
 
             foreach (string img in nomeCarros)
             {
                 string[] separador = img.Split('\\');
-                string[] carro = separador[7].Split('.');
+                string[] carro = separador[8].Split('.');
                 if (comboBox2.Text == carro[0])
                 {
-                    pictureBox2.ImageLocation = @"C:\Users\lucca\Documents\Projetos\Codificados\ImagensCarros\" + comboBox2.Text + ".jpg";
+                    pictureBox2.ImageLocation = @"C:\Users\lucca\Documents\Projetos\Codificados\ProjetoCarros\ImagensCarros\" + comboBox2.Text + ".jpg";
                     pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
